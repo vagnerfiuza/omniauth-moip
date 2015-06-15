@@ -1,8 +1,6 @@
 # Omniauth::Moip
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/omniauth/moip`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Official OmniAuth strategy for autentication on [Moip](https://moip.com.br) using OAuth2
 
 ## Installation
 
@@ -22,7 +20,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+use OmniAuth::Builder do
+  provider :moip, ENV["MOIP_APP_ID"], ENV["MOIP_APP_SECRET"],
+    {
+      redirect_uri: "http://mywebsite.com",
+      scope: "CREATE_ORDER", # Check Moip documentation
+    }
+end
+```
+
+For Sandbox:
+
+```ruby
+use OmniAuth::Builder do
+  provider :moip, ENV["MOIP_APP_ID"], ENV["MOIP_APP_SECRET"],
+    {
+      environment: :sandbox,
+      redirect_uri: "http://mywebsite.com",
+      scope: "CREATE_ORDER", # Check Moip documentation
+    }
+end
+```
+
 
 ## Development
 
