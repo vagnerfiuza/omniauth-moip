@@ -6,8 +6,8 @@ require 'omniauth-moip/version'
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-moip"
   spec.version       = OmniAuth::Moip::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Rodrigo Saito"]
+  spec.email         = ["dev@moip.com.br"]
 
   spec.summary       = %q{OmniAuth strategy for Moip}
   spec.description   = %q{OmniAuth strategy for Moip}
