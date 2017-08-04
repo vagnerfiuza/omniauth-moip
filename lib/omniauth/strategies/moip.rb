@@ -6,7 +6,7 @@ module OmniAuth
 
       option :name, "moip"
 
-      option :client_options, { site: "https://api.moip.com.br" }
+      option :client_options, { site: "https://connect.moip.com.br" }
 
       uid{ access_token["moipAccountId"] }
 
@@ -14,7 +14,7 @@ module OmniAuth
 
       def client
         if options.environment == :sandbox
-          options.client_options.site = "https://test.moip.com.br"
+          options.client_options.site = "https://connect-sandbox.moip.com.br"
         end
 
         super
